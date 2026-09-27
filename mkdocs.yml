@@ -1,0 +1,77 @@
+site_name: The World Manual
+site_description: 一个关于财富、时间、国家、产业、金融与生活结构的个人知识库
+site_url: https://docknek7.github.io/world-manual/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: white
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: black
+      accent: white
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 财富与时间:
+      - wealth/index.md
+      - 财务自由的数学: wealth/financial-independence.md
+      - 固定支出与自由: wealth/fixed-costs.md
+  - 国家如何运转:
+      - states/index.md
+      - GDP、GNI 与生产率: states/gdp-gni-productivity.md
+  - 产业与公司:
+      - industry/index.md
+      - 全球价值链: industry/global-value-chain.md
+  - 金融系统:
+      - finance/index.md
+      - 利率为什么重要: finance/interest-rates.md
+  - 国家案例:
+      - countries/index.md
+      - 日本研究模板: countries/japan.md
+  - 数据与资料:
+      - sources/index.md
+      - 数据源清单: sources/data-sources.md
+
+copyright: "Personal knowledge base · Built with MkDocs Material"
